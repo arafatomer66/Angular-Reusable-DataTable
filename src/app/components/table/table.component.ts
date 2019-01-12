@@ -13,6 +13,7 @@ import { DataSource } from '@angular/cdk/table';
 export class TableComponent implements OnInit {
   @Input() displayedColumns: any[]=[];
   @Input('data') data :MyDataSource;
+  dataSubject = new BehaviorSubject<any[]>([]);
   //displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   // dataSource = this.data;
   constructor() { }
